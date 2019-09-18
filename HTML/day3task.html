@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DAY 3 TASKs</title>
+    <style>
+      table, th, td { border: 1.5px solid black ; border-collapse: collapse; padding: 3px;}
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>H1</th>
+        <th>H2</th>
+        <th>H3</th>
+      </tr>
+      <tr>
+        <td rowspan="2">A</td>
+        <td>B</td>
+        <td>C</td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td>E</td>
+      </tr>
+      <tr>
+        <td>G</td>
+        <td colspan="2">H</td>
+      </tr>
+    </table></br>
+    <script type="text/javascript">
+
+    var studentData = [["RollNo" , "StudentName", "collegeName" ,"Marks" ,"Sem"], ["1","virat","IIT","100","8"], ["1","virat","yyyy","100","8"], ["1","virat","IIT","100","8"]];
+    createTable(studentData);
+
+      function createTable(tableData) {
+
+          document.write("<table>");
+          for(i=0;i<studentData.length;i++) {
+            document.write("<tr>");
+            for(j=0;j<studentData[i].length;j++){
+              if(i==0) {
+              document.write("<th>");
+              document.write(studentData[i][j]);
+              document.write("</th>");}
+              else {
+              document.write("<td>");
+              document.write(studentData[i][j]);
+              document.write("</td>"); }
+            }
+            document.write("</tr>");
+          }
+          document.write("</table>");
+
+      }
+    </script>
+    </br>
+    <script type="text/javascript">
+    (function(v){
+      document.write("<table>");
+      var temp=v;
+      for(i=0;i<10;i++){
+        document.write("<tr><td>");
+        document.write(v);
+        document.write("</td></tr>");
+        v+=temp;
+      }
+      document.write("</table>");
+    })(2);
+    </script>
+    </br>
+
+  </body>
+</html>
