@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TITLE</title>
+    <script type="text/javascript">
+      function validEmail(){
+        var inputText = document.getElementById('mail');
+        //alert(inputText);
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(inputText.value.match(mailformat))
+        {
+          inputText.focus();
+          return true;
+        }
+        else
+        {
+          alert("You have entered an invalid email address!");
+          inputText.focus();
+          return false;
+        }
+      }
+      function validDob(){
+        var dt=new Date();
+        var year=dt.getFullYear(); var month=dt.getMonth()+1; var date=dt.getDate();
+        if(month<10) { month='0'+month; } if(date<10) { date='0'+date; }
+        document.getElementById('dob').max=year+'-'+month+'-'+date;
+        alert(year+'-'+month+'-'+date);
+      }
+    </script>
+  </head>
+  <body background="bg.jpg">
+    <div style="text-align:right">
+      <!-- <form action="login.html" method="post> -->
+      <form>
+          <!--<Text style="color:white;"> Email: </Text><input type="text" id="mail" style="background-color:transparent; color:white;">-->
+          <Text style="color:white;">  D.O.B:</Text><input type="date" onclick="validDob()" id="dob" style="background-color:transparent; color:white;">
+        <input type="submit">
+      </form>
+    </div>
+      <div style="background-color:grey">
+        <h1>HEADING</h1>
+        <p>"Sed ut perspiciatis unde omnis iste natus error sit <b>voluptatem</b> accusantium doloremque laudantium, totam rem aperiam,
+          eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+          voluptas sit aspernatur aut odit aut fugit, <b>sed quia consequuntur</b> magni dolores eos qui ratione voluptatem sequi nesciunt.
+          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+          Ut enim ad minima veniam, quis nostrum <b><u>exercitationem</u></b> ullam corporis suscipit <i>laboriosam, nisi ut aliquid ex ea commodi consequatur?</i>
+          Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+        <u>vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</u>"</p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+          <li>Facilisis mauris sit amet massa.</li>
+          <li>Purus gravida quis blandit turpis cursus.</li>
+          <li>Auctor urna nunc id cursus metus.</li>
+        </ul>
+        <ol type="I">
+          <li>ultricies</li>
+          <li>leo</li>
+          <li>asdhui</li>
+          <li>nunc</li>
+          <li>uio</li>
+          <li>qwery</li>
+        </ol>
+      </div>
+      <div style="background-color:white">
+      <marquee direction="right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</marquee>
+      <ol type="A">
+        <li>Snacks</li>
+        <ol type="1">
+          <li>Chips</li>
+          <li>Munchies</li>
+        </ol>
+        <li>Drinks</li>
+        <ol type="1">
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+        </ol>
+        <li>Water</li>
+      </ol>
+    </div>
+      <div style="background-color:lightblue">
+        <h3>Valuerpo</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Quam nulla porttitor massa id neque aliquam vestibulum. Nam libero justo laoreet sit amet cursus sit amet.
+          Massa vitae tortor condimentum lacinia quis vel eros donec. Vitae aliquet nec ullamcorper sit amet risus nullam eget felis.
+          Nulla at volutpat diam ut venenatis tellus in metus. In est ante in nibh mauris cursus mattis molestie. Eu volutpat odio facilisis mauris sit amet.
+          Quam viverra orci sagittis eu volutpat odio facilisis mauris sit. Viverra tellus in hac habitasse platea dictumst.
+          Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Mauris nunc congue nisi vitae suscipit. Sit amet consectetur adipiscing elit.</p>
+      </div>
+  </body>
+</html>

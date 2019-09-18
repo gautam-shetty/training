@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DAY 2</title>
+  <script type="text/javascript">
+    function validCaps(e){
+      if(!(e.keyCode>64&&e.keyCode<91)) { e.preventDefault(); alert("Only CAPS accepted"); }
+    }
+    function validAlpha(e){
+      if(!((e.keyCode>64&&e.keyCode<91)||(e.keyCode>96&&e.keyCode<123))) { e.preventDefault(); alert("Only Alphabets accepted"); }
+    }
+    function hide() {
+      var x = document.getElementById("img");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    //COORDINATES
+    function showCoords(event) {
+      var x = event.clientX;
+      var y = event.clientY;
+      var coor = "X coords: " + x + ", Y coords: " + y;
+      document.getElementById("demo").innerHTML = coor;
+    }
+    function clearCoor() {
+      document.getElementById("demo").innerHTML = "";
+    }
+
+    //POPUP
+    function pop() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+
+    //concat
+    function formSubmit() {
+      f=document.getElementById('fn').value;
+      l=document.getElementById('ln').value;
+      prompt(f+" "+l+" is this you?");
+    }
+  </script>
+  </head>
+  <body>
+    <input type="text" onkeypress="validCaps(event)" id="cap" placeholder="ONLY CAPS" style="cursor: pointer;">
+    <input type="text" onkeypress="validAlpha(event)" id="onlyAlpha" placeholder="ONLY Alphabets" style="cursor: crosshair;">
+    </br></br>
+    <img src="temp.jfif" width="300" height="300" onclick="hide()" id="img">
+    </br></br>
+    <div onmousemove="showCoords(event)" onmouseout="clearCoor()" style=" width: 500px; height: 200px; border: 1px solid black;"></div>
+    <p id="demo"></p>
+    </br></br>
+    <a href="https://www.google.com/" target="_blank">GOOGLE - New Tab</a>
+    </br></br>
+    <button onclick="myFunction()">CLICK HERE</button>
+    <p id="demo"></p>
+          <script>
+          function myFunction() {
+            var x = prompt("HELLO");
+          }
+          </script>
+    </br></br>
+    <form>
+    First name: <input type="text" id="fn">
+    Last name: <input type="text" id="ln">
+    <input type="button" onclick="formSubmit()" value="SEND" id="send">
+    </form>
+    </br></br>
+    <button onclick="conv()">$ TO INR</button>
+
+    <p id="qwe"></p>
+
+    <script>
+    function conv() {
+      var person = prompt("Please enter $", "1");
+      if (person != null) {
+        document.getElementById("qwe").innerHTML =
+        "Dollar:" + person + " ~ INR: " + (person*71.92);
+      }
+    }
+    </script>
+  </body>
+</html>
