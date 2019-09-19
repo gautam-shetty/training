@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DAY 4</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $("p").click(function(){
+        $(this).hide();
+      });
+    });
+
+    count=(function likeCounter() {
+      var likeCount=0;
+      return function(){
+        return ++likeCount;
+      }
+    })();
+
+    function temp() {
+      likeCount=10;
+      alert(likeCount);
+    }
+  </script>
+  </head>
+  <body>
+    <p>Hello my name is LUL, Im shy, so DONT CLICK ME, i will sun away.</p>
+    <input type="submit" onclick="alert(count())" value="like">
+    <input type="submit" onclick="temp()" value="other">
+  </body>
+</html>
