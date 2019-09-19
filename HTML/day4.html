@@ -5,28 +5,19 @@
     <title>DAY 4</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript">
-    $(function(){
-      $("p").click(function(){
-        $(this).hide();
-      });
-    });
-
-    count=(function likeCounter() {
-      var likeCount=0;
-      return function(){
-        return ++likeCount;
+  $(function(){
+    $("#op").click(
+    function(){
+      for (var i = $('#io1').val(); i <= $('#io2').val(); i++) {
+        $( "ul" ).append( "<li>"+i+"</li>" );
       }
-    })();
-
-    function temp() {
-      likeCount=10;
-      alert(likeCount);
-    }
+    })
+  })
   </script>
   </head>
   <body>
-    <p>Hello my name is LUL, Im shy, so DONT CLICK ME, i will sun away.</p>
-    <input type="submit" onclick="alert(count())" value="like">
-    <input type="submit" onclick="temp()" value="other">
+    <input type="number" id="io1">&nbsp<input type="number" id="io2"> <input type="submit" id="op">
+    <ul>
+    </ul>
   </body>
 </html>

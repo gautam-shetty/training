@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Example</title>
+    <style media="screen">
+      .customDiv{
+            margin:3px;
+            min-height:50px;
+            background-color:silver;
+            text-align:center;
+            font-size:large
+        }
+        .sidebarContent{
+            background-color:silver;
+            text-align:center;
+            font-size:large;
+            min-height:150px;
+            margin-bottom:10px;
+        }
+
+        .mainContent{
+            background-color:silver;
+            text-align:center;
+            font-size:large;
+            min-height:310px;
+        }
+        a.img-thumbnail{
+            background-color:deeppink;
+        }
+        .col-centered{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }
+        hr{
+            width:100%;
+            height: 4px;
+            color:red;
+        }
+        img{
+            min-height:350px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script type="text/javascript">
+      function validPw(){
+        var inputText = document.getElementById("pw").value;
+        var cS=false,cC=false;
+
+        //alert(inputText.length);
+        if(inputText.length>6){
+          for(i=0;i<inputText.length;i++){
+          //  console.log(inputText.charCodeAt(i));
+            if(((inputText.charCodeAt(i)>57)&&(inputText.charCodeAt(i)<65))||((inputText.charCodeAt(i)>32)&&(inputText.charCodeAt(i)<48))) cS=true;
+            if((inputText.charCodeAt(i)>64)&&(inputText.charCodeAt(i)<91)) cC=true;
+          }
+          if(cS==true && cC==true) {
+            alert("LOGIN SUCCESSFUL");
+            return true
+          } else {
+            alert("LOGIN FALSE");
+            return false;
+          }
+        } else {
+          alert("min char 6")
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-centered">
+              <img src="Images/img5.jpeg" class="img-responsive  img-circle" />
+          </div>
+          <div class="col-lg-12 col-centered">
+              <form name="LOGIN" action="day4task1.html" onsubmit="return validPw()" method="post">
+                <fieldset>
+                  <legend>LOGIN: </legend>
+                    <input type="text" placeholder="Username"><br>
+                    <input type="text" placeholder="Password" id="pw"><br>
+                    <input type="submit">
+                </fieldset>
+              </form>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
