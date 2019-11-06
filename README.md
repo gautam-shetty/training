@@ -30,27 +30,31 @@ Status/Topics covered:
 - [x] Javascript
 - [x] jQuery
 - [x] RDBMS
-- [ ] Core Java
-- [ ] Hibernate
-- [ ] Spring
-- [ ] Responsive Web
-- [ ] JS Framework
-- [ ] Angular
-- [ ] MongoDB Basics
-- [ ] CRUD Operations
-- [ ] Getting db information
-- [ ] Upserts and Inserts
-- [ ] Operations with arrays
-- [ ] Indexes
-- [ ] Bulk Operations
-- [ ] Pluggable Operations
-- [ ] Pluggable Storage Engines 
-- [ ] Java Driver
-- [ ] Mongo as Shards 
-- [ ] Project
+- [x] Core Java
+- [x] Hibernate
+- [x] Spring
+- [x] Responsive Web
+- [x] JS Framework
+- [x] Angular
+- [x] MongoDB Basics
+- [x] CRUD Operations
+- [x] Getting db information
+- [x] Upserts and Inserts
+- [x] Operations with arrays
+- [x] Indexes
+- [x] Bulk Operations
+- [x] Pluggable Operations
+- [x] Pluggable Storage Engines 
+- [x] Java Driver
+- [x] Mongo as Shards 
+- [x] Project
 
 ## Assessments
 * [Week 1](https://github.com/gautam-shetty/assessments/tree/master/20092019)
+* [Week 2](https://github.com/gautam-shetty/assessments/tree/master/03102019)
+* [Week 3](https://github.com/gautam-shetty/assessments/tree/master/18102019)
+* [Week 4](https://github.com/gautam-shetty/assessments/tree/master/23102019)
+* [Project](https://github.com/gautam-shetty/quickbid)
 
 ## Tools Used
 While training following tools where used
@@ -58,6 +62,11 @@ While training following tools where used
 * Oracle Database 11g Express Edition
 * SQL Developer
 * Eclipse JEE Photon with Java JDK and JRE
+* MongoDB
+* VS Code Editor
+* Angular
+* Apache Maven
+* Postman
 
 ### Authors
 Submitted by [Gautam Shetty](https://github.com/gautam-shetty) <img alt="GitHub followers" src="https://img.shields.io/github/followers/gautam-shetty?label=Follow&style=social">
