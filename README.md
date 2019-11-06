@@ -15,10 +15,10 @@
 </p>
 
 ## Table of contents
--[Syllabus Modules](#syllabus-modules)
--[Tools Used](#tools-used)
--[Assessments](#assessments)
--[Authors](#authors)
+- [Syllabus Modules](#syllabus-modules)
+- [Assessments](#assessments)
+- [Tools Used](#tools-used)
+- [Authors](#authors)
 
 ## Syllabus Modules
 
